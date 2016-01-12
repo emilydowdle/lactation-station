@@ -1,0 +1,11 @@
+<h3 class="margin-top-80">All Medications</h3>
+<ul class="collection">
+  <% @drugs.each do |drug| %>
+    <li class="collection-item">
+      <h5><%= drug.name %></h5>
+      <p><strong>LactMed Summary:</strong> <%= drug.summary %></p>
+      <p><strong>Drug Classes:</strong> <%= drug.drug_classes %></p>
+      <p class=""><%= link_to "View More Information", root_path %></p>
+    </li>
+  <% end %>
+</ul>

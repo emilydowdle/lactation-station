@@ -1,0 +1,36 @@
+.margin-top-80 {
+  margin-top: 80px;
+}
+
+.width-150 {
+  max-width: 150px;
+}
+
+.width-375 {
+  max-width: 375px;
+}
+
+.side-margin-15 {
+  margin: 0 15px;
+}
+
+#margin-left-270 {
+  margin-left: 270px;
+}
+
+#margin-left-300 {
+  margin-left: 300px;
+}
+
+p strong {
+  font-weight: 600;
+}
+
+p {
+  color: #263238;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #37474f;
+  font-weight: 200;
+}

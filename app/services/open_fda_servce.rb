@@ -2,16 +2,12 @@ class OpenFdaService
   attr_reader :connection
 
   def initialize
-    @connection = Hurley::Client.new("http://congress.api.sunlightfoundation.com")
+    @connection = Hurley::Client.new("https://api.fda.gov/drug/label")
     connection.query[:apikey] = ENV["fda_api_key"]
   end
 
-  def legislators(params)
+  def medications(params)
     parse(connection.get("legislators", params))[:results]
-  end
-
-  def committees(params)
-    parse(connection.get("committees", params))[:results]
   end
 
   private

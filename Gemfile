@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
 gem 'figaro'
+gem 'hurley'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'pg'

@@ -14,12 +14,16 @@
   margin: 0 15px;
 }
 
-#margin-left-270 {
-  margin-left: 270px;
+.center-button {
+  display: block !important;
+  margin: 0 auto;
+  width: 300px;
 }
 
-#margin-left-300 {
-  margin-left: 300px;
+.center-button-small {
+  display: block !important;
+  margin: 0 auto;
+  width: 75px;
 }
 
 p strong {

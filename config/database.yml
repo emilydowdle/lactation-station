@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: lactation-station_production
-  username: lactation-station
-  password: <%= ENV['LACTATION-STATION_DATABASE_PASSWORD'] %>
+  username: emilydowdle1
+  password: <%= ENV['LACTATION_STATION_DATABASE_PASSWORD'] %>

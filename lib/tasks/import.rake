@@ -3,7 +3,7 @@ require 'yaml'
 namespace :data do
   desc "Import the LactMed data into database."
   task :import => :environment do
-    lact_med_path = "#{Rails.root}/lib/assets/final_lact_med_data.yml"
+    lact_med_path = "#{Rails.root}/lib/assets/working_lact_med_data.yml"
     lact_med_yml = YAML.load_file(lact_med_path)
     lact_med_yml["lactmed"].each do |id, data|
       drug = Drug.create!(id: id,

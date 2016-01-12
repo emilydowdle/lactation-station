@@ -24,7 +24,6 @@ class Seed
                           drug_classes: data["drug_class"])
       puts "#{drug.name} created!"
     end
-
 end
 
 Seed.start

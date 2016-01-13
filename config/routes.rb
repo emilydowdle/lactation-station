@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :welcome, only: [:index]
   resources :home, only: [:index]
+  get 'drugs/search', to: 'drugs#search'
   resources :drugs, only: [:index, :show]
 
   get '/auth/twitter', as: :login

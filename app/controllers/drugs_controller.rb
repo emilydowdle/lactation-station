@@ -9,4 +9,8 @@ class DrugsController < ApplicationController
     med            = OpenFdaService.new
     @drug_fda      = med.drugs_by_name(@drug_lact_med.name)
   end
+
+  def search
+    
+  end
 end

@@ -10,7 +10,9 @@ class DrugsController < ApplicationController
     @drug_fda      = med.drugs_by_name(@drug_lact_med.name)
   end
 
-  def search
-    
+  def search_by_name
+  end
+
+  def search_by_usage
   end
 end

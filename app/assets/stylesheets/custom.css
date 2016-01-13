@@ -22,6 +22,11 @@
   margin: 0 15px;
 }
 
+.center-element {
+  display: block !important;
+  margin: 0 auto;
+}
+
 .center-button {
   display: block !important;
   margin: 0 auto;

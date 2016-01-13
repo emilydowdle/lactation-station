@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :welcome, only: [:index]
   resources :home, only: [:index]
-  resources :drugs, only: [:index]
+  resources :drugs, only: [:index, :show]
 
   get '/auth/twitter', as: :login
   get '/auth/twitter/callback', to: 'sessions#create'

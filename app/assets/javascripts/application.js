@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require drug_name_search
+//= require search_by_name
+//= require search_by_usage

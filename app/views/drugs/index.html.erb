@@ -10,7 +10,7 @@
       <h5 data-name="<%= drug.name %>"><%= drug.name %></h5>
       <p><strong>LactMed Summary:</strong> <%= drug.summary %></p>
       <p><strong>Drug Classes:</strong> <%= drug.drug_classes %></p>
-      <p class=""><%= link_to "View More Information", drug_path(drug) %></p>
+      <p class=""><%= link_to "View More Information", drug_path(name: drug.name) %></p>
     </li>
   <% end %>
 </ul>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'drugs/search', to: 'drugs#search_by_name'
   get 'drugs/search-name', to: 'drugs#search_by_name'
   get 'drugs/search-usage', to: 'drugs#search_by_usage'
-  resources :drugs, only: [:index, :show]
+  resources :drugs, only: [:index, :show], param: :name
 
   get '/auth/twitter', as: :login
   get '/auth/twitter/callback', to: 'sessions#create'

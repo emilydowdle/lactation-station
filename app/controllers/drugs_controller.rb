@@ -5,7 +5,7 @@ class DrugsController < ApplicationController
 
   def show
     # binding.pry
-    @drug_lact_med = Drug.find(params[:id])
+    @drug_lact_med = Drug.find_by(name: params[:name])
     med            = OpenFdaService.new
     @drug_fda      = med.drugs_by_name(@drug_lact_med.name)
   end

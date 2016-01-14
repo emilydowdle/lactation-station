@@ -1,9 +1,3 @@
-# api_key = ENV['LACTATION_STATION_DATABASE_PASSWORD']
-# ailment = "migraine"
-# response = HTTParty.get("https://api.fda.gov/drug/label.json?api_key=#{api_key}&search=indications_and_usage:\"#{}\"")
-#
-# https://api.fda.gov/drug/label.json?api_key=qeYtLsY20bNvlWTUobhZoLqvg8Te9M6XCsy7pIuj
-# &search=indications_and_usage:"migraine"
 require 'httparty'
 
 class OpenFdaService

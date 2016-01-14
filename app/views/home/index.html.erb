@@ -1,12 +1,18 @@
 <h3 class="margin-top-80 center">Welcome back, Emily!</h3>
-<div class="center-button waves-effect waves-light btn-large cyan lighten-2">
-  <%= button_to "Quick Medication Lookup", root_path %>
-</div>
+<input type="text" name="drug-name" id="drug-name" placeholder="Amoxicillin, Sertraline, etc.">
+<a id="search-submit" class="search-by-name center-button waves-effect waves-light btn btn-large cyan lighten-2">Quick Medication Lookup</a>
+
+
+<!-- <div class="center-button waves-effect waves-light btn-large cyan lighten-2">
+  <%#= button_to "Quick Medication Lookup", root_path %>
+</div> -->
+
+
+<div id="drug-data" class="clearfix"></div>
 
 <div class="row margin-top-80">
   <div class="col s6 center">
     <%= image_tag "baby-1.jpg" %>
-    <!-- <img class="width-375" src="http://stylonica.com/wp-content/uploads/2014/03/cats_animals_kittens_cat_kitten_cute_desktop_1680x1050_hd-wallpaper-753974.jpeg" alt="Babies!" /> -->
     <h5>Recent Searches</h5>
     <ul>
       <a href="#" class="col s6 center"><li>Med 1</li></a>
@@ -21,12 +27,12 @@
     <%= image_tag "baby-2.jpg" %>
     <h5>Common Medications</h5>
     <ul>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
+      <a href="/drugs/156" class="col s6 center"><li>Levothyroxine (T4)</li></a>
+      <a href="/drugs/481" class="col s6 center"><li>Simvastatin</li></a>
+      <a href="/drugs/326" class="col s6 center"><li>Sertraline</li></a>
+      <a href="/drugs/11" class="col s6 center"><li>Amoxicillin</li></a>
+      <a href="/drugs/171" class="col s6 center"><li>Metformin</li></a>
+      <a href="/drugs/334" class="col s6 center"><li>Azithromycin</li></a>
     </ul>
   </div>
 </div>
@@ -51,7 +57,7 @@
       Best for moms who know what medication they're looking for.
     </p>
     <div class="center-button width-150 waves-effect waves-light btn cyan lighten-2">
-      <%= button_to "Search", root_path %>
+      <%= button_to "Search", drugs_search_name_path, method: 'get' %>
     </div>
   </div>
   <div class="col s4 center">
@@ -61,7 +67,7 @@
       Check out your options based on what you're seeking medication for.
     </p>
     <div class="center-button width-150 waves-effect waves-light btn cyan lighten-2">
-      <%= button_to "Search", root_path %>
+      <%= button_to "Search", drugs_search_usage_path, method: 'get' %>
     </div>
   </div>
   <div class="col s4 center">
@@ -71,7 +77,7 @@
       Just browsing? Browse all the medications listed by name.
     </p>
     <div class="center-button width-150 waves-effect waves-light btn cyan lighten-2">
-      <%= button_to "View All", root_path %>
+      <%= button_to "View All", drugs_path, method: 'get' %>
     </div>
   </div>
 </div>

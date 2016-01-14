@@ -11,6 +11,7 @@ $(function(){
     var requri = 'https://api.fda.gov/drug/label.json?limit=10&search=indications_and_usage:"' + usage + '"';
 
     $.getJSON(requri, function(data) {
+      $('#drug-data').html('');
       var drugs = {};
       $.each(data.results, function (key, val) {
         debugger

@@ -1,8 +1,13 @@
-<h3 class="margin-top-80">All Medications</h3>
-<ul class="collection">
+<div class="filter margin-top-80">
+  <label for="drug_filter_by_name"><h5>Filter By Medication Name</h5></label>
+  <%= text_field :drug, :filter_by_name %>
+</div>
+
+<h3 class="margin-top-40">All Medications</h3>
+<ul id="all-drugs" class="collection">
   <% @drugs.each do |drug| %>
     <li class="collection-item">
-      <h5><%= drug.name %></h5>
+      <h5 data-name="<%= drug.name %>"><%= drug.name %></h5>
       <p><strong>LactMed Summary:</strong> <%= drug.summary %></p>
       <p><strong>Drug Classes:</strong> <%= drug.drug_classes %></p>
       <p class=""><%= link_to "View More Information", drug_path(drug) %></p>

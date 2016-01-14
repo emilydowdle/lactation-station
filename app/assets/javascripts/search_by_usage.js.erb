@@ -3,7 +3,7 @@ String.prototype.capitalize = function() {
 }
 
 $(function(){
-  $('#search-submit').on('click', function(e){
+  $('#search-submit.search-by-usage').on('click', function(e){
     e.preventDefault();
     $('#drug-data').html('<div id="loader"><%= image_tag("ajax-loader.gif", class:"center-element margin-top-40", alt:"Loading...") %></div>');
 

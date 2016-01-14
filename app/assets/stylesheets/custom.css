@@ -14,6 +14,10 @@
   max-width: 150px;
 }
 
+.width-250 {
+  max-width: 250px;
+}
+
 .width-375 {
   max-width: 375px;
 }
@@ -37,6 +41,10 @@
   display: block !important;
   margin: 0 auto;
   width: 75px;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 p strong {

@@ -14,6 +14,10 @@
   max-width: 150px;
 }
 
+.width-250 {
+  max-width: 250px;
+}
+
 .width-375 {
   max-width: 375px;
 }
@@ -11324,6 +11328,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
+
 
 
  */

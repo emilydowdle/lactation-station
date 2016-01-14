@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$("#all-drugs .collection-item");$("#drug_filter_by_name").keyup("change",function(){var u=this.value;e.each(function(e,a){$drug=$(a),$drugName=$(a).children("h5"),$drugName.data("name").includes(u)?$drug.show():$drug.hide()})})});

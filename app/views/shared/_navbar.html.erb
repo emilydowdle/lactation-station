@@ -4,7 +4,7 @@
     <ul id="nav-mobile" class="right hide-on-med-and-down offset-s1 white-text">
       <li><%#= link_to "Stuff", categories_path %></li>
       <% if current_user %>
-        <li><%= link_to "Logout", logout_path , method: :delete %></li>
+        <li><%= link_to "Logout", logout_path %></li>
       <% else %>
         <li><%= link_to "Login with Twitter", login_path %></li>
       <% end %>

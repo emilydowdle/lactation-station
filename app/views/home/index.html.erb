@@ -1,12 +1,6 @@
-<h3 class="margin-top-80 center">Welcome back, Emily!</h3>
+<h3 class="margin-top-80 center">Welcome back, <%= current_user.name %>!</h3>
 <input type="text" name="drug-name" id="drug-name" placeholder="Amoxicillin, Sertraline, etc.">
 <a id="search-submit" class="search-by-name center-button waves-effect waves-light btn btn-large cyan lighten-2">Quick Medication Lookup</a>
-
-
-<!-- <div class="center-button waves-effect waves-light btn-large cyan lighten-2">
-  <%#= button_to "Quick Medication Lookup", root_path %>
-</div> -->
-
 
 <div id="drug-data" class="clearfix"></div>
 
@@ -37,19 +31,7 @@
   </div>
 </div>
 
-<!-- <div class="margin-top-80">
-  <h4>Awesome heading</h4>
-  <p>
-    Nunc quis sagittis lacus. Aenean ut laoreet mi. Morbi at lectus id eros
-    efficitur aliquet. Curabitur risus diam, vestibulum ac elit et, maximus
-    blandit neque. Cum sociis natoque penatibus et magnis dis parturient montes,
-    nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per
-    conubia nostra, per inceptos himenaeos. Fusce ac finibus sem, id malesuada metus.
-    Aliquam lectus sapien, eleifend in erat et, tempus cursus neque.
-  </p>
-</div> -->
-
-<div class="row margin-top-80">
+<div class="row margin-top-80 margin-bottom-80">
   <div class="col s4 center">
     <%= image_tag "baby-3.jpg", alt:"cute baby", class:"width-250" %>
     <h5>Search By Name</h5>

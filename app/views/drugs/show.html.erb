@@ -1,8 +1,7 @@
+<% cache cache_key_for(Drug, "lactmed-show-#{@drug_lact_med.name}") do %>
 <h3 class="margin-top-80"><%= @drug_lact_med.name %></h3>
-
 <div>
   <h5>Information from LactMed</h5>
-
   <p>
     The information below comes from the Drugs and Lactation Database (LactMed),
     a database of drugs and chemicals from the National Institutes of Health (NIH).
@@ -19,7 +18,9 @@
   <p><strong>Effects on Lactation and Breastmilk:</strong> <%= @drug_lact_med.effects_on_lactation_and_breastmilk %></p>
   <p><strong>Drug Classes:</strong> <%= @drug_lact_med.drug_classes %></p>
 </div>
+<% end %>
 
+<% cache cache_key_for(Drug, "fda-show-#{@drug_lact_med.name}") do %>
 <div class="margin-top-40 margin-bottom-80">
   <h5>Information from the FDA</h5>
   <% if @drug_fda == "Not Found" %>

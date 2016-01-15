@@ -1,9 +1,9 @@
+<% cache cache_key_for(Drug, "index") do %>
 <div class="filter margin-top-80">
   <label for="drug_filter_by_name"><h5>Filter By Medication Name</h5></label>
   <%= text_field :drug, :filter_by_name %>
 </div>
 
-<% cache cache_key_for(Drug, "index") do %>
 <h3 class="margin-top-40">All Medications</h3>
 <ul id="all-drugs" class="collection">
   <% @drugs.each do |drug| %>

@@ -1,9 +1,12 @@
+<% cache(action: "home-#{current_user.name}", action_suffix: "quick-search") do %>
 <h3 class="margin-top-80 center">Welcome back, <%= current_user.name %>!</h3>
 <input type="text" name="drug-name" id="drug-name" placeholder="Amoxicillin, Sertraline, etc.">
 <a id="search-submit" class="search-by-name center-button waves-effect waves-light btn btn-large cyan lighten-2">Quick Medication Lookup</a>
 
 <div id="drug-data" class="clearfix"></div>
+<% end %>
 
+<% cache(action: "home-#{current_user.name}", action_suffix: "common_searches") do %>
 <div class="row margin-top-80">
   <div class="col s6 center">
     <%= image_tag "baby-1.jpg" %>
@@ -30,7 +33,9 @@
     </ul>
   </div>
 </div>
+<% end %>
 
+<% cache(action: "home", action_suffix: "search-options") do %>
 <div class="row margin-top-80 margin-bottom-80">
   <div class="col s4 center">
     <%= image_tag "baby-3.jpg", alt:"cute baby", class:"width-250" %>
@@ -63,3 +68,4 @@
     </div>
   </div>
 </div>
+<% end %>

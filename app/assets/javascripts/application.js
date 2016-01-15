@@ -17,4 +17,3 @@
 //= require search_by_name
 //= require search_by_usage
 //= require drug_index_keyup
-//= materialize

@@ -10,7 +10,7 @@ class Api::V1::DrugsController < ApplicationController
   end
 
   def letter_match
-    respond_with starts_with_query
+    respond_with Drug.starts_with_query(strong_params)
   end
 
   private
@@ -20,8 +20,7 @@ class Api::V1::DrugsController < ApplicationController
     Drug.find_by(name: name)
   end
 
-  def starts_with_query
-    letter = params[:letter].capitalize
-    Drug.where("name like ?", "#{letter}%")
+  def strong_params
+    params.permit(:id, :name, :letter)
   end
 end

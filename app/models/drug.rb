@@ -1,20 +1,8 @@
 class Drug < ActiveRecord::Base
 
-  # def summary
-  #
-  # end
-
-  # def drug_levels
-  #   drug_levels
-  # end
-  #
-  def infant_effects
-    effects_in_breastfed_infants
+  def self.starts_with_query(params)
+    letter = params[:letter].capitalize
+    Drug.where("name like ?", "#{letter}%")
   end
 
-  # effects_on_lactation_and_breastmilk
-  #
-  # name
-  #
-  # drug_classes
 end

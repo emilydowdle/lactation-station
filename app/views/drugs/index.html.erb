@@ -1,14 +1,37 @@
 <% cache cache_key_for(Drug, "index") do %>
 <div class="filter margin-top-80">
-  <label for="drug_filter_by_name"><h5>Filter By Medication Name</h5></label>
-  <%= text_field :drug, :filter_by_name %>
+  <h1>All Medications</h1>
 </div>
 
 <div class="drugs-by-letter">
-  <button id=letter-a>A</button> <a id="letter-b">B</a> <a id="letter-c">C</a> <a id="letter-d">D</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a>
+  <button id="letter-a"  class="right-margin-5 cyan lighten-2 white-text">A</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">B</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">C</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">D</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">E</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">F</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">G</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">H</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">I</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">J</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">K</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">L</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">M</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">N</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">O</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">P</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">Q</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">R</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">S</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">T</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">U</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">V</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">W</button> <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">X</button>
+  <button id="letter-a"  class="side-margin-5 cyan lighten-2 white-text">Y</button> <button id="letter-a"  class="left-margin-5 cyan lighten-2 white-text">Z</button>
 </div>
 
-<div id="drug-data" class="clearfix"></div>
+<div id="drug-data" class="clearfix">
+  <div class="margin-top-80">
+    <h5>Information from LactMed</h5>
+    <p>The information below comes from the Drugs and Lactation Database (LactMed),
+      a database of drugs and chemicals from the National Institutes of Health (NIH).
+      All data are derived from fully-referenced, peer-reviewed scientific literature.
+      For even more information according to the NIH, visit
+      <%= link_to "LactMed", "http://toxnet.nlm.nih.gov/newtoxnet/lactmed.htm" %>.
+    </p>
+  </div>
+  <% @drugs.each do |drug| %>
+    <h3 class="margin-top-40"><%= drug.name %></h3>
+    <p><strong>Summary: </strong><%= drug.summary %></p>
+    <p><strong>Drug Classes: </strong><%= drug.drug_classes %></p>
+    <%= link_to "View More Information", drug_path(name: drug.name) %>
+  <% end %>
+</div>
 <!--
 <h3 class="margin-top-40">All Medications</h3>
 <ul id="all-drugs" class="collection">

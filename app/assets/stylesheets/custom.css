@@ -26,6 +26,18 @@
   margin: 0 15px;
 }
 
+.side-margin-5 {
+  margin: 0 5px;
+}
+
+.right-margin-5 {
+  margin-right: 5px;
+}
+
+.left-margin-5 {
+  margin-left: 5px;
+}
+
 .center-element {
   display: block !important;
   margin: 0 auto;

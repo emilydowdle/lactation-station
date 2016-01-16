@@ -1,6 +1,6 @@
 class DrugsController < ApplicationController
   def index
-    @drugs = Drug.all
+    @drugs = Drug.starts_with_query(:letter => "A")
   end
 
   def show
@@ -10,9 +10,9 @@ class DrugsController < ApplicationController
     @drug_fda      = med.drugs_by_name(@drug_lact_med.name)
   end
 
-  def search_by_name
-  end
+  private
 
-  def search_by_usage
+  def strong_params
+    params.permit(:id, :name, :letter)
   end
 end

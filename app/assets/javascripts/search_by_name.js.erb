@@ -4,7 +4,8 @@ $(function(){
     $('#drug-data').html('<div id="loader"><%= image_tag("ajax-loader.gif", class:"center-element margin-top-40", alt:"Loading...") %></div>');
 
     var name = $('#drug-name').val();
-    var requri = 'https://api.fda.gov/drug/label.json?search=substance_name:"' + name + '"';
+    var fdaReqUri = 'https://api.fda.gov/drug/label.json?search=substance_name:"' + name + '"';
+    var lactMedReqUri = 'https://lactationstation.com/api/v1/drugs/' + name;
 
     $.getJSON(requri, function(data) {
       var nursing_mothers = data.results[0].nursing_mothers;

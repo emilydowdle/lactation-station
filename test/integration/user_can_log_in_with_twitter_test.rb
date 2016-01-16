@@ -4,7 +4,7 @@ class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
   include Capybara::DSL
 
   def setup
-    Capybara.app = ApiCurious::Application
+    Capybara.app = LactationStation::Application
     stub_omniauth
   end
 
@@ -23,7 +23,7 @@ class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
   end
 
   test "user can log in with button" do
-    User.stub_any_instance(:name, "Clara") do
+    User.stub_any_instance(:name, "Emily") do
       visit root_path
 
       assert_equal 200, page.status_code
@@ -31,13 +31,13 @@ class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
       click_button "Login"
 
       assert_equal root_path, current_path
-      assert page.has_content? "Clara"
+      assert page.has_content? "Emily"
       assert page.has_link? "Logout"
     end
   end
 
   test "user can log out" do
-    User.stub_any_instance(:name, "Clara") do
+    User.stub_any_instance(:name, "Emily") do
       visit root_path
 
       assert_equal 200, page.status_code
@@ -62,8 +62,8 @@ class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
           }
         },
         credentials: {
-          token: "123",
-          secret: "abc"
+          token: "12345",
+          secret: "abcde"
         }
       })
   end

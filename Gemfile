@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
+gem 'twitter'
 gem 'kaminari'
 gem 'figaro'
 gem 'hurley'

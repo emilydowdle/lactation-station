@@ -4,19 +4,21 @@
   <%= text_field :drug, :filter_by_name %>
 </div>
 
-<!-- <div>
-  <a href="#" id="letter-a">A</a> <a id="letter-b">B</a> <a id="letter-c">C</a> <a id="letter-d">D</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a>
-</div> -->
+<div class="drugs-by-letter">
+  <button id=letter-a>A</button> <a id="letter-b">B</a> <a id="letter-c">C</a> <a id="letter-d">D</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a><a id="letter-a">A</a>
+</div>
 
+<div id="drug-data" class="clearfix"></div>
+<!--
 <h3 class="margin-top-40">All Medications</h3>
 <ul id="all-drugs" class="collection">
   <% @drugs.each do |drug| %>
     <li class="collection-item">
-      <h5 data-name="<%= drug.name %>"><%= drug.name %></h5>
-      <p><strong>LactMed Summary:</strong> <%= drug.summary %></p>
-      <p><strong>Drug Classes:</strong> <%= drug.drug_classes %></p>
-      <p class=""><%= link_to "View More Information", drug_path(name: drug.name) %></p>
+      <h5 data-name="<%#= drug.name %>"><%= drug.name %></h5>
+      <p><strong>LactMed Summary:</strong> <%#= drug.summary %></p>
+      <p><strong>Drug Classes:</strong> <%#= drug.drug_classes %></p>
+      <p class=""><%#= link_to "View More Information", drug_path(name: drug.name) %></p>
     </li>
   <% end %>
 </ul>
-<% end %>
+<% end %> -->

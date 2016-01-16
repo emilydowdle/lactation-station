@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :drugs, only: [:index, :show], param: :name, defaults: { format: :json }
+      get 'drugs/letter_match/:letter', to: 'drugs#letter_match', defaults: { format: :json }
     end
   end
 end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class DrugTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "starts with query returns multiple " do
+    assert true
+  end
 end

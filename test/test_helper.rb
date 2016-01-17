@@ -23,4 +23,10 @@ class ActiveSupport::TestCase
                                oauth_token: ENV["test_oauth_token"],
                                oauth_token_secret: ENV["test_oauth_token_secret"])
   end
+
+  class ActionController::TestCase
+    def json_response
+      JSON.parse(response.body)
+    end
+  end
 end

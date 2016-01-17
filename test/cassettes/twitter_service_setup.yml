@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="8dkuRJt77tScgn8WkvCukBeCj", oauth_nonce="965f97b0db8ac6130a9b323fb27c7a01",
+        oauth_signature="YpXSMk0sdAcWEJ%2FK0zNzjGGXeOg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1452985048", oauth_token="1066151600-RRy5hXNd1lLABYQwSYngEmqqtdNeFuaHfQk3k4n",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '1032'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 16 Jan 2016 22:57:30 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sat, 16 Jan 2016 22:57:30 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A145298505023449098; Domain=.twitter.com; Path=/; Expires=Mon,
+        15-Jan-2018 22:57:30 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - c69a456caca13bdec46e46e76e003be4
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '10'
+      X-Rate-Limit-Reset:
+      - '1452985622'
+      X-Response-Time:
+      - '39'
+      X-Transaction:
+      - 6354fcf3932e4efc
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1066151600,"id_str":"1066151600","name":"Emily Freeman Dowdle","screen_name":"EditingEmily","location":"Denver,
+        CO","description":"Student at Turing School of Software Development & Design","url":"https:\/\/t.co\/Q7h640DI11","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/Q7h640DI11","expanded_url":"http:\/\/www.emilydowdle.com","display_url":"emilydowdle.com","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":58,"friends_count":133,"listed_count":2,"created_at":"Sun
+        Jan 06 16:49:03 +0000 2013","favourites_count":36,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":75,"lang":"en","status":{"created_at":"Mon
+        Dec 21 17:45:46 +0000 2015","id":678994782933266432,"id_str":"678994782933266432","text":"Not
+        a ton of details yet, but you should definitely checkout the DinosaurJS conference:
+        https:\/\/t.co\/zrNIqXmTr5","source":"\u003ca href=\"http:\/\/twitter.com\"
+        rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":2,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/zrNIqXmTr5","expanded_url":"http:\/\/dinosaurjs.org\/","display_url":"dinosaurjs.org","indices":[88,111]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C2C2C2","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/673321176458899456\/u7idSLyu_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/673321176458899456\/u7idSLyu_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/1066151600\/1425935788","profile_link_color":"0084B4","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Sat, 16 Jan 2016 22:57:29 GMT
+recorded_with: VCR 3.0.0

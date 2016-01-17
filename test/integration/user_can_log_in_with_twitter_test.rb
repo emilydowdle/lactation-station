@@ -16,7 +16,7 @@ class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
 
       click_link "Login"
 
-      assert_equal root_path, current_path
+      assert_equal home_index_path, current_path
       assert page.has_content? "Emily"
       assert page.has_link? "Logout"
     end
@@ -30,7 +30,7 @@ class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
 
       click_button "Login"
 
-      assert_equal root_path, current_path
+      assert_equal home_index_path, current_path
       assert page.has_content? "Emily"
       assert page.has_link? "Logout"
     end

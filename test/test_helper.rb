@@ -2,14 +2,15 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/stub_any_instance'
+require 'minitest/pride'
 require 'mocha/mini_test'
+require 'capybara/rails'
 require 'webmock'
 require 'vcr'
 require 'simplecov'
 SimpleCov.start
 
 class ActiveSupport::TestCase
-  fixtures :all
 
   VCR.configure do |config|
     config.cassette_library_dir = 'test/cassettes'
@@ -27,6 +28,14 @@ class ActiveSupport::TestCase
   class ActionController::TestCase
     def json_response
       JSON.parse(response.body)
+    end
+  end
+
+  class ActionDispatch::IntegrationTest
+    include Capybara::DSL
+
+    def teardown
+      reset_session!
     end
   end
 end

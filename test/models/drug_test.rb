@@ -4,19 +4,19 @@ class DrugTest < ActiveSupport::TestCase
   test "starts with query returns multiple records" do
     query = Drug.starts_with_query(letter: "D")
 
-    assert_equal 2, query.count
+    assert_equal 79, query.count
   end
 
-  test "starts with query returns correct values" do
+  test "starts with query returns correct number of items" do
     query = Drug.starts_with_query(letter: "D")
 
-    assert_equal Drug.first.id, query[1].id
-    assert_equal Drug.first.name, query[1].name
+    assert_equal 78, query.first.id
+    assert_equal 79, query.count
   end
 
-  test "when there are no matches starts with query returns no records" do
-    query = Drug.starts_with_query(letter: "A")
+  test "returns correct number of drugs when searched with more than one letter" do
+    query = Drug.starts_with_query(letter: "Ac")
 
-    assert_equal 0, query.count
+    assert_equal 13, query.count
   end
 end

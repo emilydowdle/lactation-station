@@ -1,14 +1,19 @@
-<% cache("home-#{current_user.name}-quick-search") do %>
-<h3 class="margin-top-80 center">Welcome back, <%= current_user.name %>!</h3>
+<% cache("home-quick-search") do %>
+<% if current_user %>
+  <h3 class="margin-top-80 center">Welcome back, <%= current_user.name %>!</h3>
+<% else %>
+  <h3 class="margin-top-80 center">Welcome to Lactation Station!</h3>
+<% end %>
+
 <input type="text" name="drug-name" id="drug-name" placeholder="Amoxicillin, Sertraline, etc.">
 <a id="search-submit" class="search-by-name center-button waves-effect waves-light btn btn-large cyan lighten-2">Quick Medication Lookup</a>
 
 <div id="drug-data" class="clearfix"></div>
 <% end %>
 
-<% cache("home-#{current_user.name}-common-searches") do %>
+<% cache("home-common-searches") do %>
 <div class="row margin-top-80">
-  <div class="col s6 center">
+  <div id="recent-searches" class="col s6 center">
     <%= image_tag "baby-1.jpg" %>
     <h5>Recent Searches</h5>
     <ul>
@@ -20,22 +25,22 @@
       <a href="#" class="col s6 center"><li>Med 1</li></a>
     </ul>
   </div>
-  <div class="col s6 center">
+  <div id="common-medications" class="col s6 center">
     <%= image_tag "baby-2.jpg" %>
     <h5>Common Medications</h5>
     <ul>
-      <a href="/drugs/156" class="col s6 center"><li>Levothyroxine (T4)</li></a>
-      <a href="/drugs/481" class="col s6 center"><li>Simvastatin</li></a>
-      <a href="/drugs/326" class="col s6 center"><li>Sertraline</li></a>
-      <a href="/drugs/11" class="col s6 center"><li>Amoxicillin</li></a>
-      <a href="/drugs/171" class="col s6 center"><li>Metformin</li></a>
-      <a href="/drugs/334" class="col s6 center"><li>Azithromycin</li></a>
+      <a href="/drugs/Levothyroxine" class="col s6 center"><li>Levothyroxine (T4)</li></a>
+      <a href="/drugs/Simvastatin" class="col s6 center"><li>Simvastatin</li></a>
+      <a href="/drugs/Sertraline" class="col s6 center"><li>Sertraline</li></a>
+      <a href="/drugs/Amoxicillin" class="col s6 center"><li>Amoxicillin</li></a>
+      <a href="/drugs/Metformin" class="col s6 center"><li>Metformin</li></a>
+      <a href="/drugs/Azithromycin" class="col s6 center"><li>Azithromycin</li></a>
     </ul>
   </div>
 </div>
 <% end %>
 
-<% cache("home-#{current_user.name}-search-options") do %>
+<% cache("home-search-options") do %>
 <div class="row margin-top-80 margin-bottom-80">
   <div class="col s4 center">
     <%= image_tag "baby-3.jpg", alt:"cute baby", class:"width-250" %>

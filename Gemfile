@@ -20,13 +20,14 @@ gem 'httparty'
 gem 'responders'
 
 group :development, :test do
-  gem 'capybara'
   gem 'byebug'
   gem 'pry'
   gem 'minitest-stub_any_instance'
 end
 
 group :test do
+  gem 'capybara'
+  gem 'launchy'
   gem 'vcr'
   gem 'simplecov'
   gem 'webmock'

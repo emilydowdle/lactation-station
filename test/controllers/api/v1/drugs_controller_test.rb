@@ -26,12 +26,6 @@ class Api::V1::DrugsControllerTest < ActionController::TestCase
       assert drug["id"]
       assert drug["name"]
       assert drug["summary"]
-      assert drug["drug_levels"]
-      assert drug["effects_in_breastfed_infants"]
-      assert drug["effects_on_lactation_and_breastmilk"]
-      assert drug["alternate_drugs"]
-      assert drug["cas_registry_number"]
-      assert drug["drug_classes"]
       assert drug["created_at"]
       assert drug["updated_at"]
     end
@@ -69,8 +63,8 @@ class Api::V1::DrugsControllerTest < ActionController::TestCase
     get :letter_match, format: :json, letter: "D"
 
     assert_response :success
-    assert_equal 2, json_response.count
-    assert_equal Drug.first.id, json_response[1]["id"]
-    assert_equal Drug.first.name, json_response[1]["name"]
+    assert_equal 79, json_response.count
+    assert_equal 78, json_response[1]["id"]
+    assert_equal "Dalteparin", json_response[1]["name"]
   end
 end

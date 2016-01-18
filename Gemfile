@@ -23,6 +23,12 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem 'minitest-stub_any_instance'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
+  gem 'phantomjs'
+  gem 'magic_lamp'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 group :test do
@@ -32,6 +38,7 @@ group :test do
   gem 'simplecov'
   gem 'webmock'
   gem 'mocha'
+  gem 'poltergeist'
 end
 
 group :development do

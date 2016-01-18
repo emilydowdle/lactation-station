@@ -7,6 +7,8 @@ require 'mocha/mini_test'
 require 'capybara/rails'
 require 'webmock'
 require 'vcr'
+require 'capybara/poltergeist'
+require 'selenium-webdriver'
 require 'simplecov'
 SimpleCov.start
 

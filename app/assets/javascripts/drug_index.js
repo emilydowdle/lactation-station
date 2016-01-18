@@ -46,7 +46,7 @@ $(function(){
 $(function(){
   $('.drugs-by-letter #letter-b').on('click', function(e){
     e.preventDefault();
-    $('#drug-data').html('');
+    $('#drug-data').html('<div id="b-drugs"></div>');
     apiRequest('B');
   });
 });

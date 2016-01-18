@@ -42,7 +42,7 @@
 
 <% cache("home-search-options") do %>
 <div class="row margin-top-80 margin-bottom-80">
-  <div class="col s4 center">
+  <div id="search-by-name" class="col s4 center">
     <%= image_tag "baby-3.jpg", alt:"cute baby", class:"width-250" %>
     <h5>Search By Name</h5>
     <p>
@@ -52,7 +52,7 @@
       <%= button_to "Search", drugs_search_name_path, method: 'get' %>
     </div>
   </div>
-  <div class="col s4 center">
+  <div id="search-by-cause" class="col s4 center">
     <%= image_tag "baby-4.jpg", alt:"cute baby", class:"width-250" %>
     <h5>Search By Cause</h5>
     <p>
@@ -62,7 +62,7 @@
       <%= button_to "Search", drugs_search_usage_path, method: 'get' %>
     </div>
   </div>
-  <div class="col s4 center">
+  <div id="all-medications" class="col s4 center">
     <%= image_tag "baby-5.jpg", alt:"cute baby", class:"width-250" %>
     <h5>View All Medications</h5>
     <p>

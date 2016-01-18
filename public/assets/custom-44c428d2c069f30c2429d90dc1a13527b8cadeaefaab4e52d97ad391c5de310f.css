@@ -1,0 +1,145 @@
+/* line 1, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.margin-top-80 {
+  margin-top: 80px;
+}
+
+/* line 5, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+/* line 9, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.margin-bottom-80 {
+  margin-bottom: 80px;
+}
+
+/* line 13, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.width-150 {
+  max-width: 150px;
+}
+
+/* line 17, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.width-250 {
+  max-width: 250px;
+}
+
+/* line 21, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.width-375 {
+  max-width: 375px;
+}
+
+/* line 25, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.side-margin-15 {
+  margin: 0 15px;
+}
+
+/* line 29, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.side-margin-5 {
+  margin: 0 5px;
+}
+
+/* line 33, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.right-margin-5 {
+  margin-right: 5px;
+}
+
+/* line 37, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.left-margin-5 {
+  margin-left: 5px;
+}
+
+/* line 41, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.center-element {
+  display: block !important;
+  margin: 0 auto;
+}
+
+/* line 46, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.center-button {
+  display: block !important;
+  margin: 0 auto;
+  width: 300px;
+}
+
+/* line 52, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.center-button-small {
+  display: block !important;
+  margin: 0 auto;
+  width: 75px;
+}
+
+/* line 58, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* line 62, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+p strong {
+  font-weight: 600;
+}
+
+/* line 66, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+p {
+  color: #263238;
+}
+
+/* line 70, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+h1, h2, h3, h4, h5 {
+  color: #37474f;
+  font-weight: 200;
+}
+
+/* line 75, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.sideMargin15 {
+  margin: 0 15px;
+}
+
+/* line 79, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.light-grey-text {
+  color: #8899a6;
+}
+
+/* line 83, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.zero-margin {
+  margin: 0;
+}
+
+/* line 87, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.zero-margin-bottom {
+  margin-bottom: 0;
+}
+
+/* line 91, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+#profile-main {
+  margin-top: 150px;
+}
+
+/* line 95, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+#profile-sidebar {
+  width: 30%;
+  margin-right: 5%;
+}
+
+/* line 100, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+#profile-photo {
+  background-color: white;
+  width: 200px;
+  height: 202px;
+  border-radius: 25px;
+  margin: 50px 50px 0 0;
+}
+
+/* line 108, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+/* line 112, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+/* line 116, /Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/assets/stylesheets/custom.scss */
+.padding-5 {
+  padding: 5px;
+}

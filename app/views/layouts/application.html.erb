@@ -11,7 +11,6 @@
 
   <title>LactationStation</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag 'application', :async => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,5 +19,6 @@
   <div class="container">
     <%= yield %>
   </div>
+  <%= javascript_include_tag 'application'%>
 </body>
 </html>

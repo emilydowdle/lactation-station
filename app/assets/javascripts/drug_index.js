@@ -1,6 +1,6 @@
 function apiRequest(letter) {
   var letter = letter;
-  var reqUri = 'https://lactationstation.herokuapp.com/api/v1/drugs/letter_match/' + letter;
+  var reqUri = '/api/v1/drugs/letter_match/' + letter;
 
   $.getJSON(reqUri, function(data) {
     $('#drug-data').html('<div class="margin-top-80"><h5>Information from LactMed</h5><p>' +

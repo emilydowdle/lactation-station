@@ -1,3 +1,7 @@
-<img id="profile-photo" src='<%= current_user.profile_photo %>'>
-<h2 class="zero-margin-bottom"><%= current_user.name %></h2>
-<p class="light-grey-text">@<%= current_user.handle %></p>
+<% if current_user %>
+  <%= cache "twitter-tweet-form-#{current_user}" do %>
+    <img id="profile-photo" src='<%= current_user.profile_photo %>'>
+    <h2 class="zero-margin-bottom"><%= current_user.name %></h2>
+    <p class="light-grey-text">@<%= current_user.handle %></p>
+  <% end %>
+<% end %>

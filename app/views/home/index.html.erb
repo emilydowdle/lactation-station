@@ -1,4 +1,4 @@
-<% cache("home-quick-search") do %>
+<% cache("home-quick-search-#{current_date}") do %>
 <% if current_user %>
   <h3 class="margin-top-80 center">Welcome back, <%= current_user.name %>!</h3>
 <% else %>
@@ -11,36 +11,41 @@
 <div id="drug-data" class="clearfix"></div>
 <% end %>
 
-<% cache("home-common-searches") do %>
+<!-- #######################################
+# THIS (CURRENT DATE NEEDS TO BE DIFFERENT #
+############################################ -->
 <div class="row margin-top-80">
-  <div id="recent-searches" class="col s6 center">
-    <%= image_tag "baby-1.jpg" %>
-    <h5>Recent Searches</h5>
-    <ul>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-      <a href="#" class="col s6 center"><li>Med 1</li></a>
-    </ul>
-  </div>
-  <div id="common-medications" class="col s6 center">
-    <%= image_tag "baby-2.jpg" %>
-    <h5>Common Medications</h5>
-    <ul>
-      <a href="/drugs/Levothyroxine" class="col s6 center"><li>Levothyroxine (T4)</li></a>
-      <a href="/drugs/Simvastatin" class="col s6 center"><li>Simvastatin</li></a>
-      <a href="/drugs/Sertraline" class="col s6 center"><li>Sertraline</li></a>
-      <a href="/drugs/Amoxicillin" class="col s6 center"><li>Amoxicillin</li></a>
-      <a href="/drugs/Metformin" class="col s6 center"><li>Metformin</li></a>
-      <a href="/drugs/Azithromycin" class="col s6 center"><li>Azithromycin</li></a>
-    </ul>
-  </div>
+  <% cache("home-recent-searches-#{current_date}") do %>
+    <div id="recent-searches" class="col s6 center">
+      <%= image_tag "baby-1.jpg" %>
+      <h5>Recent Searches</h5>
+      <ul>
+        <a href="#" class="col s6 center"><li>Med 1</li></a>
+        <a href="#" class="col s6 center"><li>Med 1</li></a>
+        <a href="#" class="col s6 center"><li>Med 1</li></a>
+        <a href="#" class="col s6 center"><li>Med 1</li></a>
+        <a href="#" class="col s6 center"><li>Med 1</li></a>
+        <a href="#" class="col s6 center"><li>Med 1</li></a>
+      </ul>
+    </div>
+  <% end %>
+  <%= cache "home-common-medications-#{current_date}" do %>
+    <div id="common-medications" class="col s6 center">
+      <%= image_tag "baby-2.jpg" %>
+      <h5>Common Medications</h5>
+      <ul>
+        <a href="/drugs/Levothyroxine" class="col s6 center"><li>Levothyroxine (T4)</li></a>
+        <a href="/drugs/Simvastatin" class="col s6 center"><li>Simvastatin</li></a>
+        <a href="/drugs/Sertraline" class="col s6 center"><li>Sertraline</li></a>
+        <a href="/drugs/Amoxicillin" class="col s6 center"><li>Amoxicillin</li></a>
+        <a href="/drugs/Metformin" class="col s6 center"><li>Metformin</li></a>
+        <a href="/drugs/Azithromycin" class="col s6 center"><li>Azithromycin</li></a>
+      </ul>
+    </div>
+  <% end %>
 </div>
-<% end %>
 
-<% cache("home-search-options") do %>
+<% cache("home-search-options-#{current_date}") do %>
 <div class="row margin-top-80 margin-bottom-80">
   <div id="search-by-name" class="col s4 center">
     <%= image_tag "baby-3.jpg", alt:"cute baby", class:"width-250" %>

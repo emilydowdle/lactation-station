@@ -1,15 +1,19 @@
-<% cache("navbar") do %>
 <nav id="primary-navigation">
   <div class="nav-wrapper amber darken-2">
-    <a href="/" class="brand-logo side-margin-15 white-text">LactationStation</a>
+    <%= cache "logo-navbar-#{current_date}" do %>
+      <a href="/" class="brand-logo side-margin-15 white-text">LactationStation</a>
+    <% end %>
     <ul id="nav-mobile" class="right hide-on-med-and-down offset-s1 white-text">
       <% if current_user %>
-        <li><%= link_to "Profile", profile_path %></li>
-        <li><%= link_to "Logout", logout_path %></li>
+        <%= cache "logout-navbar-#{current_user}" do %>
+          <li><%= link_to "Profile", profile_path %></li>
+          <li><%= link_to "Logout", logout_path %></li>
+        <% end %>
       <% else %>
-        <li><%= link_to "Login with Twitter", login_path %></li>
+        <%= cache "login-navbar-#{current_date}" do %>
+          <li><%= link_to "Login with Twitter", login_path %></li>
+        <% end %>
       <% end %>
     </ul>
   </div>
 </nav>
-<% end %>

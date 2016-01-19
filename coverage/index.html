@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-18T10:48:09-07:00">2016-01-18T10:48:09-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-18T20:27:23-07:00">2016-01-18T20:27:23-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">44.0%</span></span>
+    (<span class="covered_percent"><span class="red">62.5%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.7
+         0.6
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>25</b> relevant lines. 
-    <span class="green"><b>11</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed </span>
+    <b>16</b> relevant lines. 
+    <span class="green"><b>10</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -51,13 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#a291077e83e165f8d053a3ea6bad177eab287c12" class="src_link" title="test/integration/all_medication_page_test.rb">test/integration/all_medication_page_test.rb</a></td>
-        <td class="red strong">44.0 %</td>
-        <td>44</td>
-        <td>25</td>
-        <td>11</td>
-        <td>14</td>
-        <td>0.7</td>
+        <td class="strong"><a href="#7f1e78dbb92b89d0df4d25f8c8317d5353bc51fd" class="src_link" title="test/integration/drugs_index_ajax_integration_test.rb">test/integration/drugs_index_ajax_integration_test.rb</a></td>
+        <td class="red strong">62.5 %</td>
+        <td>27</td>
+        <td>16</td>
+        <td>10</td>
+        <td>6</td>
+        <td>0.6</td>
       </tr>
       
     </tbody>
@@ -76,14 +76,14 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="a291077e83e165f8d053a3ea6bad177eab287c12">
+        <div class="source_table" id="7f1e78dbb92b89d0df4d25f8c8317d5353bc51fd">
   <div class="header">
-    <h3>test/integration/all_medication_page_test.rb</h3>
-    <h4><span class="red">44.0 %</span> covered</h4>
+    <h3>test/integration/drugs_index_ajax_integration_test.rb</h3>
+    <h4><span class="red">62.5 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>14</b> lines missed.</span>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -105,7 +105,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">class UserSeesCorrectMedicationsOnIndexPage &lt; ActionDispatch::IntegrationTest</code>
+          <code class="ruby">class UserViewsCorrectDrugsAfterAjaxLoads &lt; ActionDispatch::IntegrationTest</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -114,88 +114,88 @@
           <code class="ruby">  def setup</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          <code class="ruby">    url = &quot;localhost:3000/drugs&quot;</code>
+          <code class="ruby">    VCR.use_cassette(&quot;drugs_index_test#setup&quot;) do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @driver = Selenium::WebDriver.for(:remote, :url =&gt; url)</code>
+          <code class="ruby">      @url = &quot;https://lactationstation.herokuapp.com/drugs&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    visit drugs_path</code>
+          <code class="ruby">      @driver = Selenium::WebDriver.for :remote</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  test &quot;displays correct text&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
-          
-          <code class="ruby">    assert page.has_content? &quot;All Medications&quot;</code>
+          <code class="ruby">  def test_only_b_drugs_show_up</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    assert page.has_button? &quot;B&quot;, &quot;X&quot;</code>
+          <code class="ruby">    VCR.use_cassette(&quot;drugs_index#b&quot;) do</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">    assert page.has_content? &quot;Information from LactMed&quot;</code>
+          <code class="ruby">      @driver.navigate.to @url</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">    assert page.has_link? &quot;View More Information&quot;</code>
+          <code class="ruby">      element = @driver.find_element(:id, &#39;letter-b&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">      @driver.click element</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">      save_and_open_page</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  test &quot;displays only A drugs&quot; do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">    count = count_items(&quot;A&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
@@ -204,151 +204,49 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">    page.assert_selector(&#39;h3&#39;, count: count)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  test &quot;displays only B drugs&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">    # VCR.use_cassette(&quot;all_medication_page#b_drugs&quot;) do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
-          
-          <code class="ruby">      count = count_items(&quot;B&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
-          
-          <code class="ruby">      element = @driver.find_element(&quot;B&quot;)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
-          
-          <code class="ruby">      element.submit</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
-          
-          <code class="ruby">      save_and_open_page</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
-          
-          <code class="ruby">      click_button &quot;B&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
-          
-          <code class="ruby">      page.assert_selector(&#39;h3&#39;, count: count)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">  def teardown</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="38">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @driver.quit</code>
+          <code class="ruby">    @driver.quit if @driver</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">  def count_items(letter)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
           <code class="ruby">    Drug.where(&quot;name like ?&quot;, &quot;#{letter}%&quot;).count</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>

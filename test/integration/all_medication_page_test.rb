@@ -2,8 +2,6 @@ require "test_helper"
 
 class UserSeesCorrectMedicationsOnIndexPage < ActionDispatch::IntegrationTest
   def setup
-    url = "localhost:3000/drugs"
-    @driver = Selenium::WebDriver.for(:remote, :url => url)
     visit drugs_path
   end
 
@@ -18,24 +16,6 @@ class UserSeesCorrectMedicationsOnIndexPage < ActionDispatch::IntegrationTest
     count = count_items("A")
 
     page.assert_selector('h3', count: count)
-  end
-
-  test "displays only B drugs" do
-    # VCR.use_cassette("all_medication_page#b_drugs") do
-      count = count_items("B")
-
-      element = @driver.find_element("B")
-      element.submit
-      save_and_open_page
-      click_button "B"
-
-      page.assert_selector('h3', count: count)
-    # end
-
-  end
-
-  def teardown
-    @driver.quit
   end
 
   def count_items(letter)

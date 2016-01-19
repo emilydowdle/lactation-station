@@ -80,6 +80,8 @@ GEM
       activesupport (>= 4.1.0)
     hashdiff (0.2.3)
     hashie (3.4.3)
+    heroku-deflater (0.6.2)
+      rack (>= 1.4.5)
     http (0.9.8)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -276,6 +278,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
   figaro
+  heroku-deflater
   httparty
   hurley
   jbuilder (~> 2.0)

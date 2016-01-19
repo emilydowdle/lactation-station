@@ -2,6 +2,7 @@ require "test_helper"
 
 class UserViewsCorrectDrugsAfterAjaxLoads < ActionDispatch::IntegrationTest
   def setup
+    skip
     VCR.use_cassette("drugs_index_test#setup") do
       @url = "https://lactationstation.herokuapp.com/drugs"
       @driver = Selenium::WebDriver.for :remote
@@ -9,6 +10,7 @@ class UserViewsCorrectDrugsAfterAjaxLoads < ActionDispatch::IntegrationTest
   end
 
   def test_only_b_drugs_show_up
+    skip
     VCR.use_cassette("drugs_index#b") do
       @driver.navigate.to @url
       element = @driver.find_element(:id, 'letter-b')

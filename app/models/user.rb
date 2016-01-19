@@ -28,4 +28,11 @@ class User < ActiveRecord::Base
   def handle
     twitter_user.screen_name
   end
+
+  def breastfeeding_timeline
+    twitter_service.search("breastfeeding",
+                           count: 10,
+                           result_type: "recent",
+                           since: (Time.now-2.weeks).to_date)
+  end
 end

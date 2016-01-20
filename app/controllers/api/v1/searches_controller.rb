@@ -8,8 +8,8 @@ class Api::V1::SearchesController < ApplicationController
   def create
     if drug = Drug.find_by(name: strong_params[:value].titleize)
       search = current_user.searches.new(drug_id: drug.id)
+      search.save
     end
-    search.save
   end
 
   private

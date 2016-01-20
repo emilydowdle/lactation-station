@@ -5,8 +5,9 @@
         <img class="timelinePhoto" src='<%= tweet.user.profile_image_uri %>'>
       </div>
       <div class="col 8 width80">
-        <p class="timelineTweetText"><%= tweet.user.name %></p>
+        <p class="timelineTweetText"><%= tweet.user.name %> (@<%= tweet.user.screen_name %>)</p>
         <p><%= tweet.text %></p>
+        <%= link_to "View on Twitter", "https://twitter.com/#{tweet.user.screen_name}", class:"right", target:"_blank" %>
       </div>
     </div>
   <% end %>

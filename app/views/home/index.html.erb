@@ -11,21 +11,15 @@
 <div id="drug-data" class="clearfix"></div>
 <% end %>
 
-<!-- #######################################
-# THIS (CURRENT DATE NEEDS TO BE DIFFERENT #
-############################################ -->
 <div class="row margin-top-80">
   <% cache("home-recent-searches-#{current_date}") do %>
     <div id="recent-searches" class="col s6 center">
       <%= image_tag "baby-1.jpg" %>
       <h5>Recent Searches</h5>
       <ul>
-        <a href="#" class="col s6 center"><li>Med 1</li></a>
-        <a href="#" class="col s6 center"><li>Med 1</li></a>
-        <a href="#" class="col s6 center"><li>Med 1</li></a>
-        <a href="#" class="col s6 center"><li>Med 1</li></a>
-        <a href="#" class="col s6 center"><li>Med 1</li></a>
-        <a href="#" class="col s6 center"><li>Med 1</li></a>
+        <% @searches.each do |search| %>
+          <li class="col s6 center"><%= link_to search.drug_name, "/drugs/#{search.drug_name}" %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

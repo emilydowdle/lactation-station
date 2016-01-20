@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :searches
+
   def self.from_omniauth(auth_info)
     where(uid: auth_info[:uid]).first_or_create do |new_user|
       new_user.uid                = auth_info.uid
@@ -31,8 +33,15 @@ class User < ActiveRecord::Base
 
   def breastfeeding_timeline
     twitter_service.search("breastfeeding",
-                           count: 10,
                            result_type: "recent",
-                           since: (Time.now-2.weeks).to_date)
+                           since: (Time.now-2.weeks).to_date).take(10)
+  end
+
+  def search_count_greater_than_6
+    searches.count > 6
+  end
+
+  def recent_searches
+    searches.order(:updated_at).take(6)
   end
 end

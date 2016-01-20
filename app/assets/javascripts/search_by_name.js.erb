@@ -4,11 +4,29 @@ $(function(){
     $('#drug-data').html('');
 
     var name = $('#drug-name').val();
+    var searchParams = {
+        value: name
+    }
+
+    //
+    $.ajax({
+      type:    "POST",
+      url:     "/api/v1/searches.json",
+      data:    searchParams,
+      success: function(xhr) {
+        console.log("success!");
+      },
+      error: function(xhr) {
+        console.log(xhr.responseText);
+      }
+    });
+
+    //
     var fdaReqUri = 'https://api.fda.gov/drug/label.json?search=substance_name:"' + name + '"';
     var lactMedReqUri = 'http://localhost:3000/api/v1/drugs/' + name;
 
     $.getJSON(lactMedReqUri, function(data) {
-      var name = data.name
+      var name = data.name;
       var summary = data.summary;
       var drug_levels = data.drug_levels;
       var effects_in_breastfed_infants = data.effects_in_breastfed_infants;
@@ -22,8 +40,8 @@ $(function(){
       '<p><strong>Drug Levels: </strong>' + drug_levels + '</p>' +
       '<p><strong>Effects in Breastfed Infants: </strong>' + effects_in_breastfed_infants + '</p>' +
       '<p><strong>Effects on Lactation and Breastmilk: </strong>' + effects_on_lactation_and_breastmilk + '</p>' +
-      '<p><strong>Drug Classes: </strong>' + drug_classes + '</p></div>')
-    })
+      '<p><strong>Drug Classes: </strong>' + drug_classes + '</p></div>');
+    });
 
     $.getJSON(fdaReqUri, function(data) {
       var nursing_mothers = data.results[0].nursing_mothers;
@@ -38,12 +56,13 @@ $(function(){
       '<p><strong>Nursing Mothers: </strong>' + nursing_mothers + '</p>' +
       '<p><strong>Drug Description: </strong>' + description + '</p>' +
       '<p><strong>Usage: </strong>' + indications_and_usage + '</p>' +
-      '<p><strong>Manufacturer: </strong>' + manufacturer + '</p></div>')
+      '<p><strong>Manufacturer: </strong>' + manufacturer + '</p></div>');
     })
 
     .fail(function() {
       $('#drug-data').html('<div class="margin-top-40 margin-bottom-80"><p>There is no information on <span class="capitalize">' + name + '</span> from the FDA to display.</p></div>');
     });
+
 
 
 

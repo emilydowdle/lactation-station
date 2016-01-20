@@ -8,20 +8,12 @@ $(function(){
         value: name
     }
 
-    //
     $.ajax({
       type:    "POST",
       url:     "/api/v1/searches.json",
-      data:    searchParams,
-      success: function(xhr) {
-        console.log("success!");
-      },
-      error: function(xhr) {
-        console.log(xhr.responseText);
-      }
+      data:    searchParams
     });
 
-    //
     var fdaReqUri = 'https://api.fda.gov/drug/label.json?search=substance_name:"' + name + '"';
     var lactMedReqUri = 'https://lactationstation.herokuapp.com/api/v1/drugs/' + name;
 

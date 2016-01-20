@@ -676,6 +676,24 @@
         null,
         null
       ],
+      "/Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/services/twitter_service.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
       "/Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/controllers/welcome_controller.rb": [
         1,
         null
@@ -722,27 +740,9 @@
         2,
         null,
         null
-      ],
-      "/Users/emilydowdle1/Dropbox/turing_work/lactation-station/app/services/twitter_service.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null,
-        null
       ]
     },
-    "timestamp": 1453259416
+    "timestamp": 1453259620
   },
   "Unit Tests": {
     "coverage": {

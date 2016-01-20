@@ -1,11 +1,12 @@
-<div id="recentTweets">
+<div id="recentTweets" class="margin-bottom-80">
+  <h5 class="margin-top-80 margin-bottom-25">Recent Tweets About Breastfeeding</h5>
   <% current_user.breastfeeding_timeline.each do |tweet| %>
     <div class="">
       <div class="col 2">
         <img class="timelinePhoto" src='<%= tweet.user.profile_image_uri %>'>
       </div>
-      <div class="col 8 width80">
-        <p class="timelineTweetText"><%= tweet.user.name %> (@<%= tweet.user.screen_name %>)</p>
+      <div class="col 8 width80 margin-bottom-25">
+        <p class="timelineTweetText"><strong><%= tweet.user.name %></strong> (@<%= tweet.user.screen_name %>)</p>
         <p><%= tweet.text %></p>
         <%= link_to "View on Twitter", "https://twitter.com/#{tweet.user.screen_name}", class:"right", target:"_blank" %>
       </div>

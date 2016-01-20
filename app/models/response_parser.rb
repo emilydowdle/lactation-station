@@ -31,6 +31,7 @@ class ResponseParser
   end
 
   def confirm_response(call)
-    call.first ? call : ["No data to display"]
+    return ["No data to display"] if call == nil
+    return call.first ? call : ["No data to display"]
   end
 end

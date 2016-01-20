@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
     twitter_user.screen_name
   end
 
+  def tweet(tweet)
+    twitter_service.update(tweet)
+  end
+
   def breastfeeding_timeline
     twitter_service.search("breastfeeding",
                            result_type: "recent",

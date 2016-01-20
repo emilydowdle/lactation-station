@@ -10,6 +10,7 @@ class Api::V1::SearchesController < ApplicationController
       search = current_user.searches.new(drug_id: drug.id)
       search.save
     end
+    render nothing: true
   end
 
   private

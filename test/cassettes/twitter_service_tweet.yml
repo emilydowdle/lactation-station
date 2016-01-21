@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=So+awesome%21
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.15.0
+      Authorization:
+      - OAuth oauth_consumer_key="8dkuRJt77tScgn8WkvCukBeCj", oauth_nonce="fefb911a81461359e74822b31fe48482",
+        oauth_signature="LGBb8I%2FAcbVg%2FFx762q%2BqUQLDnY%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1453333913", oauth_token="1066151600-RRy5hXNd1lLABYQwSYngEmqqtdNeFuaHfQk3k4n",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '938'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 20 Jan 2016 23:51:53 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Wed, 20 Jan 2016 23:51:53 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A145333391352516045; Domain=.twitter.com; Path=/; Expires=Fri,
+        19-Jan-2018 23:51:53 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 8fc56486d8edb9370eb456bd67d83b91
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '217'
+      X-Transaction:
+      - 34a6190d856a6c4e
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"created_at":"Wed Jan 20 23:51:53 +0000 2016","id":689958557320646659,"id_str":"689958557320646659","text":"So
+        awesome!","source":"\u003ca href=\"https:\/\/lactationstation.herokuapp.com\"
+        rel=\"nofollow\"\u003eLactationStationDevelopment\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":1066151600,"id_str":"1066151600","name":"Emily
+        Freeman Dowdle","screen_name":"EditingEmily","location":"Denver, CO","description":"Student
+        at Turing School of Software Development & Design","url":"https:\/\/t.co\/Q7h640DI11","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/Q7h640DI11","expanded_url":"http:\/\/www.emilydowdle.com","display_url":"emilydowdle.com","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":58,"friends_count":133,"listed_count":2,"created_at":"Sun
+        Jan 06 16:49:03 +0000 2013","favourites_count":36,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":76,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C2C2C2","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/673321176458899456\/u7idSLyu_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/673321176458899456\/u7idSLyu_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/1066151600\/1425935788","profile_link_color":"0084B4","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":false,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"}'
+    http_version: 
+  recorded_at: Wed, 20 Jan 2016 23:51:53 GMT
+recorded_with: VCR 3.0.0

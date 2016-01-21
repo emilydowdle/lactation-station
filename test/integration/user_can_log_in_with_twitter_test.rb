@@ -1,8 +1,6 @@
 require "test_helper"
 
 class UserCanLogInWithTwitter < ActionDispatch::IntegrationTest
-  include Capybara::DSL
-
   def setup
     Capybara.app = LactationStation::Application
     stub_omniauth

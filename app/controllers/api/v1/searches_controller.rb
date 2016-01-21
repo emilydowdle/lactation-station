@@ -16,6 +16,6 @@ class Api::V1::SearchesController < ApplicationController
   private
 
   def strong_params
-    params.permit(:id, :value)
+    params.permit(:id, :value, :current_user)
   end
 end

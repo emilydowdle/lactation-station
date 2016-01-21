@@ -1,0 +1,14 @@
+<h3 class="margin-top-80 center">Your baby's safety is our priority</h3>
+<%= image_tag "baby-homepage.jpg", class:"center-element" %>
+<h5 class="center" >Find out which medications are safe to take while breastfeeding</h5>
+<div class="center">
+  <p>Breastfeeding is challenging enough. Trying to figure out which medications are safe for you
+  and for your baby? That's more than you should have to handle. At LactationStation, you can quickly find information about specific drugs your
+  doctor may prescribe. We pull from two sources: <a href="http://toxnet.nlm.nih.gov/newtoxnet/lactmed.htm">LactMed</a>,
+  a database from the National Institutes of Health (NIH) that specializes in
+  research regarding lactation and the Federal Drug Administration (FDA),
+  which provides detailed information on specific medications.</p>
+
+  <p>You can search for medications by <%= link_to "name", drugs_search_name_path %> or <%= link_to "indication", drugs_search_usage_path %>. Or you can
+  <%= link_to "view a comprehensive list of over 1000 medications", drugs_path %>.</p>
+</div>

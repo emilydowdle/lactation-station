@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-20T18:48:22-07:00">2016-01-20T18:48:22-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-20T19:07:47-07:00">2016-01-20T19:07:47-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.29
+         10.33
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>30</b> files in total.
-    <b>391</b> relevant lines. 
-    <span class="green"><b>389</b> lines covered</span> and
+    <b>29</b> files in total.
+    <b>389</b> relevant lines. 
+    <span class="green"><b>387</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -236,16 +236,6 @@
         <td>9</td>
         <td>5</td>
         <td>5</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#b274f2463a38ba35725cc8f63eb9ddbc29b53ac7" class="src_link" title="test/controllers/profile_controller_test.rb">test/controllers/profile_controller_test.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>2</td>
-        <td>2</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -2394,66 +2384,6 @@
   </pre>
 </div>
       
-        <div class="source_table" id="b274f2463a38ba35725cc8f63eb9ddbc29b53ac7">
-  <div class="header">
-    <h3>test/controllers/profile_controller_test.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;test_helper&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class ProfileControllerTest &lt; ActionController::TestCase</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">  # test &quot;the truth&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">  #   assert true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
         <div class="source_table" id="a291077e83e165f8d053a3ea6bad177eab287c12">
   <div class="header">
     <h3>test/integration/all_medication_page_test.rb</h3>
@@ -2597,19 +2527,19 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">      page.all(:css, &#39;.drug-show-page-link&#39;).each do |el|</code>
+          <code class="ruby">      page.all(:css, &#39;.drug-show-page-link&#39;).each do |drug|</code>
         </li>
       
         <li class="covered" data-hits="97" data-linenumber="23">
           <span class="hits">97</span>
           
-          <code class="ruby">        visit el[:href]</code>
+          <code class="ruby">        visit drug[:href]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">        </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="97" data-linenumber="25">

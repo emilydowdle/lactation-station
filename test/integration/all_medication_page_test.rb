@@ -19,9 +19,9 @@ class UserSeesCorrectMedicationsOnIndexPage < ActionDispatch::IntegrationTest
 
   test "each drug's show page displays correct information" do
     VCR.use_cassette("drug_index#show_page_links_work") do
-      page.all(:css, '.drug-show-page-link').each do |el|
-        visit el[:href]
-        
+      page.all(:css, '.drug-show-page-link').each do |drug|
+        visit drug[:href]
+
         assert page.has_content? "Information from LactMed"
       end
     end

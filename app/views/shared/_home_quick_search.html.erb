@@ -1,0 +1,8 @@
+<% if current_user %>
+  <h3 class="margin-top-80 center">Welcome back, <%= current_user.name %>!</h3>
+<% else %>
+  <h3 class="margin-top-80 center">Welcome to Lactation Station!</h3>
+<% end %>
+<input type="text" name="drug-name" id="drug-name" placeholder="Amoxicillin, Sertraline, etc.">
+<a id="search-submit" class="search-by-name center-button waves-effect waves-light btn btn-large cyan lighten-2">Quick Medication Lookup</a>
+<div id="drug-data" class="clearfix"></div>

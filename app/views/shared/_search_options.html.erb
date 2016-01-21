@@ -1,0 +1,32 @@
+<div class="row margin-top-80 margin-bottom-80">
+  <div id="search-by-name" class="col s4 center">
+    <%= image_tag "baby-3.jpg", alt:"cute baby", class:"width-250" %>
+    <h5>Search By Name</h5>
+    <p>
+      Best for moms who know what medication they're looking for.
+    </p>
+    <div class="center-button width-150 waves-effect waves-light btn cyan lighten-2">
+      <%= button_to "Search", drugs_search_name_path, method: 'get' %>
+    </div>
+  </div>
+  <div id="search-by-cause" class="col s4 center">
+    <%= image_tag "baby-4.jpg", alt:"cute baby", class:"width-250" %>
+    <h5>Search By Cause</h5>
+    <p>
+      Check out your options based on what you're seeking medication for.
+    </p>
+    <div class="center-button width-150 waves-effect waves-light btn cyan lighten-2">
+      <%= button_to "Search", drugs_search_usage_path, method: 'get' %>
+    </div>
+  </div>
+  <div id="all-medications" class="col s4 center">
+    <%= image_tag "baby-5.jpg", alt:"cute baby", class:"width-250" %>
+    <h5>View All Medications</h5>
+    <p>
+      Just browsing? Browse all the medications listed by name.
+    </p>
+    <div class="center-button width-150 waves-effect waves-light btn cyan lighten-2">
+      <%= button_to "View All", drugs_path, method: 'get' %>
+    </div>
+  </div>
+</div>

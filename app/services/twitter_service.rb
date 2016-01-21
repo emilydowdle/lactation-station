@@ -1,5 +1,4 @@
 class TwitterService
-
   def initialize(user)
     @oauth_token = user.oauth_token
     @oauth_token_secret = user.oauth_token_secret
@@ -13,6 +12,4 @@ class TwitterService
       config.access_token_secret = @oauth_token_secret
     end
   end
-
-  # Tweeter class, takes in a user and handles interaction
 end

@@ -1,42 +1,13 @@
 <% cache cache_key_for(Drug, "lactmed-show-#{@drug_lact_med.name}") do %>
-<h3 class="margin-top-80"><%= @drug_lact_med.name %></h3>
-<div>
-  <h5>Information from LactMed</h5>
-  <p>
-    The information below comes from the Drugs and Lactation Database (LactMed),
-    a database of drugs and chemicals from the National Institutes of Health (NIH).
-
-    All data are derived from fully-referenced, peer-reviewed scientific literature.
-
-    For even more information about <%= @drug_lact_med.name %> according to the NIH,
-    visit <%= link_to "LactMed", "http://toxnet.nlm.nih.gov/newtoxnet/lactmed.htm" %>.
-  </p>
-
-  <p><strong>Summary:</strong> <%= @drug_lact_med.summary %></p>
-  <p><strong>Drug Levels for Mothers and Infants:</strong> <%= @drug_lact_med.drug_levels %></p>
-  <p><strong>Effects in Breastfed Infants:</strong> <%= @drug_lact_med.effects_in_breastfed_infants %></p>
-  <p><strong>Effects on Lactation and Breastmilk:</strong> <%= @drug_lact_med.effects_on_lactation_and_breastmilk %></p>
-  <p><strong>Drug Classes:</strong> <%= @drug_lact_med.drug_classes %></p>
-</div>
+  <h3 class="margin-top-80"><%= @drug_lact_med.name %></h3>
+  <div>
+    <%= render partial: 'shared/lact_med_info' %>
+    <%= render partial: 'shared/lact_med_drug_details' %>
+  </div>
 <% end %>
 
 <% cache cache_key_for(Drug, "fda-show-#{@drug_lact_med.name}") do %>
-<div class="margin-top-40 margin-bottom-80">
-  <h5>Information from the FDA</h5>
-  <% if @drug_fda == "Not Found" %>
-    <p>
-      There is no information on <%= @drug_lact_med.name %> from the FDA to display.
-    </p>
-  <% else %>
-    <p>
-      The information below is provided by OpenFDA, a research project. This data is not
-      intended for clinical use. While the FDA makes every effort to ensure the data is accurate,
-      you should assume all results are unvalidated.
-    </p>
-    <p><strong>Nursing Mothers:</strong> <%= @drug_fda.nursing_mothers %></p>
-    <p><strong>Drug Description:</strong> <%= @drug_fda.description %></p>
-    <p><strong>Usage:</strong> <%= @drug_fda.usage %></p>
-    <p><strong>Manufacturer:</strong> <%= @drug_fda.manufacturer_name %></p>
-  <% end %>
-</div>
+  <div class="margin-top-40 margin-bottom-80">
+    <%= render partial: 'shared/fda_info' %>
+  </div>
 <% end %>

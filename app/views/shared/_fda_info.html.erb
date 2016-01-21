@@ -1,0 +1,16 @@
+<h5>Information from the FDA</h5>
+<% if @drug_fda == "Not Found" %>
+  <p>
+    There is no information on <%= @drug_lact_med.name %> from the FDA to display.
+  </p>
+<% else %>
+  <p>
+    The information below is provided by OpenFDA, a research project. This data is not
+    intended for clinical use. While the FDA makes every effort to ensure the data is accurate,
+    you should assume all results are unvalidated.
+  </p>
+  <p><strong>Nursing Mothers:</strong> <%= @drug_fda.nursing_mothers %></p>
+  <p><strong>Drug Description:</strong> <%= @drug_fda.description %></p>
+  <p><strong>Usage:</strong> <%= @drug_fda.usage %></p>
+  <p><strong>Manufacturer:</strong> <%= @drug_fda.manufacturer_name %></p>
+<% end %>

@@ -1,5 +1,4 @@
 class ResponseParser
-
   attr_accessor :response
 
   def initialize(response)

@@ -1,11 +1,5 @@
 class HomeController < ApplicationController
-
   def index
-    if current_user && current_user.search_count_greater_than_6
-      @searches = current_user.recent_searches
-    else
-      @searches = Search.recent
-    end
-    # SearchResults.new(current_user), creates object and pushes all logic down the stack
+    @searches = RecentSearches.new(current_user).display
   end
 end

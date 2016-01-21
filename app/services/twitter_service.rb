@@ -13,4 +13,6 @@ class TwitterService
       config.access_token_secret = @oauth_token_secret
     end
   end
+
+  # Tweeter class, takes in a user and handles interaction
 end

@@ -6,5 +6,6 @@ class HomeController < ApplicationController
     else
       @searches = Search.recent
     end
+    # SearchResults.new(current_user), creates object and pushes all logic down the stack
   end
 end

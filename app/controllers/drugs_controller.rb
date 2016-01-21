@@ -8,6 +8,8 @@ class DrugsController < ApplicationController
     @drug_lact_med = Drug.find_by(name: name)
     med            = OpenFdaService.new
     @drug_fda      = med.drugs_by_name(name)
+    # push into OpenFdaService
+    # create drug fda object and initialize with name, all logic will live there
   end
 
   private

@@ -57,7 +57,7 @@ $(function(){
     })
 
     .fail(function() {
-      $('#drug-data').html('<div class="margin-top-40 margin-bottom-80"><p>There is no information on <span class="capitalize">' + name + '</span> from LactMed or the FDA to display.</p></div>');
+      $('#drug-data').append('<div class="margin-top-40 margin-bottom-80"><p>There is no information on <span class="capitalize">' + name + '</span> from the FDA to display.</p></div>');
     });
 
   });

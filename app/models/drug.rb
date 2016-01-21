@@ -9,4 +9,8 @@ class Drug < ActiveRecord::Base
     letter = params[:letter].capitalize
     Drug.where("name like ?", "#{letter}%")
   end
+
+  def slug
+    name
+  end
 end

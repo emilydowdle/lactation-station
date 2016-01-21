@@ -2,5 +2,5 @@
   <h3 class="margin-top-40"><%= drug.name %></h3>
   <p><strong>Summary: </strong><%= drug.summary %></p>
   <p><strong>Drug Classes: </strong><%= drug.drug_classes %></p>
-  <%= link_to "View More Information", drug_path(name: drug.name), class: "drug-show-page-link" %>
+  <%= link_to "View More Information", drug_path(name: drug.slug), class: "drug-show-page-link" %>
 <% end %>

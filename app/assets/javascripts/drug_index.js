@@ -20,7 +20,7 @@ function apiRequest(letter) {
         '<h3>' + name + '</h3>' +
         '<p><strong>Summary: </strong>' + summary + '</p>' +
         '<p><strong>Drug Classes: </strong>' + drug_classes + '</p>' +
-        '<a href=/drugs/' + name + '>View More Information</a>');
+        '<a href=/drugs/' + encodeURIComponent(name) + '>View More Information</a>');
 
         drugs[name] = val;
       }

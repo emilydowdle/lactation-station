@@ -22,7 +22,7 @@ Overall, Lactation Station uses 3 APIs: the API I built from LactMed's data, Ope
 
 #### Features
 
-** Search By Name **
+**Search By Name**
 When a user searches for 'amoxicillin', an AJAX call is sent to my API to pull the following information: 
 * Drug summary
 * Drug levels in the mother and infant
@@ -36,13 +36,13 @@ Then an AJAX call is sent to OpenFDA to respond with the following information:
 * Usage information 
 * Manufacturer
 
-** Search By Usage **
+**Search By Usage**
 A user can search for an ailment, such as migraines, and receive information on 10 drugs typically prescribed for migraines.
 
-** View All Medications **
+**View All Medications**
 Paginated index of all the drugs in my database.
 
-** Twitter Integration **
+**Twitter Integration**
 Lactation Station uses the Twitter gem to provide the user the following features:
 * OAuth Twitter signin 
 * Twitter profile
@@ -53,3 +53,4 @@ Lactation Station uses the Twitter gem to provide the user the following feature
 
 For more information about other projects, visit [EmilyDowdle.com](www.emilydowdle.com)
 
+[Lactation Station Features In Action](http://recordit.co/4Z91XFlpDW)

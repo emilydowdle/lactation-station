@@ -51,6 +51,6 @@ Lactation Station uses the Twitter gem to provide the user the following feature
     * Most recent tweets with the keyword 'breastfeeding'
 * The ability to send a tweet directly from Lactation Station
 
-For more information about other projects, visit [EmilyDowdle.com](www.emilydowdle.com)
+For more information about other projects, visit [EmilyDowdle.com](http://emilydowdle.com)
 
 ![Lactation Station Features In Action](http://g.recordit.co/4Z91XFlpDW.gif)

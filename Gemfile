@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'httparty'
 gem 'responders'
+gem "nokogiri", ">= 1.10.4"
 
 group :development, :test do
   gem 'byebug'
